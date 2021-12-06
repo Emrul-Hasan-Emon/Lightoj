@@ -1,0 +1,69 @@
+///              B I S M I L L A H I R  R A H M A N I R  R A H I M
+
+#include<bits/stdc++.h>
+#include<vector>
+#include<set>
+#include<map>
+using namespace std;
+typedef bool                      boo;
+typedef int                       li;
+typedef long long int             ll;
+typedef unsigned long long int    l1;
+
+#define tc                        int t;cin>>t;while(t--)
+#define inp_i(a,n)                for(i=0; i<n ;i++) cin>>a[i]
+#define inp_lli(a,n)              for(i=0; i<n ;i++) cin>>a[i]
+#define lp(i,a,b)                 for(i=a;i<b;i++)
+#define len(z)                    z.begin(),z.end()
+#define faster                    ios::sync_with_stdio(0); cin.tie(0);cout.tie(0);
+#define input_txt                 freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
+#define nl                        <<endl
+#define spc                       <<" "
+#define sp                        <<" "<<
+#define co(x)                     cout<<x nl
+#define sz(a)                     a.size()
+#define cy                        cout<<"YES" nl
+#define cn                        cout<<"NO" nl
+#define pb                        push_back
+#define z                         0
+#define mem(b,z)                  memset(b,z,sizeof(b))
+
+void solve(){
+int tt; cin>>tt;
+for(int j=1;j<=tt;j++){
+
+int n,i,y,x,w,mv=1;
+cin>>n>>w;
+vector<li>v;
+
+for(i=0; i<n; i++){
+  cin>>x>>y;
+  v.push_back(y);
+}
+
+set<int>s(v.begin(),v.end()); 
+v.clear();
+v.assign(s.begin(),s.end());
+
+int a=v[0];
+i=1;
+while(i<n){
+    if(v[i]-a>w){
+        a=v[i];
+        mv++;
+    }
+    i++;
+}
+printf("Case %d: %d\n",j,mv);
+}
+
+}
+int main(){
+faster
+
+solve();
+// A L H A M D U L I L L A H
+// 1 2 3 2 1
+
+}
+
